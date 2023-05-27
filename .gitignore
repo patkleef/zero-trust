@@ -1,0 +1,83 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ide
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+bin/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/bin/
+**/obj/
+
+# Visual Studio code
+.vscode/
+
+# Resharper
+_ReSharper*/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Others
+*.cache
+*.log
+*.bak
+*.tmp
+*.tmp_proj
+*.resharper
+*.resharper.user
+
+# Ignore build output
+_site/
+
+# Ignore Jekyll cache and build metadata
+.jekyll-cache/
+.jekyll-metadata
+
+# Ignore Gemfile.lock as dependencies should be installed on the server
+Gemfile.lock
+
+# Ignore any local configuration files
+_config.yml
+_config.local.yml
+
+# Ignore any generated files or directories
+.sass-cache/
+.jekyll-metadata.json
+.jekyll-cache.json
+.jekyll-archives/
+.jekyll-dates/
+.jekyll-sitemap.xml
+.jekyll-redirect-from/
+.jekyll-compress-html/
+.jekyll-feed/
+.jekyll-remote-theme/
+
+# Ignore any files or directories that should not be published
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+demo/Frontend
+demo/Backend

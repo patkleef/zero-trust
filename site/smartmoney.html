@@ -1,0 +1,28 @@
+---
+layout: splash
+classes: wide
+title: SmartMoney
+excerpt: SmartMoney manages the financials of individuals and provides advice on becoming financially independent.
+header:
+  overlay_image: /assets/images/application.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  image_description: "A description of the image"
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+permalink: /smartmoney/
+---
+
+SmartMoney is an application developed by the fictional company OneFinance, which manages financial data for thousands of customers. SmartMoney helps customers gain insight into their personal finances and provides advice on becoming financially independent. The customer service department is responsible for managing all of the customer data. Based on this data, the expert department provides advice to customers on how to save costs and create monthly budgets.
+
+
+<h2>Current Azure architecture</h2>
+<img src="/assets/images/smartmoney-before.jpg" alt="SmartMoney" class="align-right" />
+Employees from OneFinance can authenticate to the SmartMoney application using their Azure AD account. The application is hosted in Azure App Service and uses Azure SQL and Azure Storage account to store data.
+The SmartMoney solution is split into a frontend application and backend application that contains a set of APIs. All is deployed and managed into one subscription.
+
+The application is available through a public URL by using Azure DNS zone. Firewall settings are configured to only allow certain IP addresses to access the application.
+
+<a href="https://github.com/patkleef/zero-trust">Source code</a>
+
+
+
+

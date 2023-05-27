@@ -1,0 +1,7 @@
+main:
+  - title: "SmartMoney"
+    url: /smartmoney
+  - title: "Posts"
+    url: /posts
+  - title: "About"
+    url: /about
