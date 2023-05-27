@@ -79,5 +79,53 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Ignore .terraform directory
+**/.terraform/*
+
+# Ignore .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Ignore crash log files
+crash.log
+
+# Ignore .tfvars files that are automatically loaded
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*_overrides.tf
+*_overrides.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore .terraform.lock.hcl files
+*.lock.hcl
+
+# Ignore .terraform/plugins directory
+**/.terraform/plugins/*
+
+# Ignore .tfplan files
+*.tfplan
+
+# Ignore .terraform/environment file
+.terraform/environment
+
+# Ignore any generated files or directories
+.terraform/
+.terraformignore
+
+# Ignore any local configuration files
+terraform.tfvars
+terraform.tfvars.json
+
+# Ignore any files or directories that should not be published
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
 demo/Frontend
 demo/Backend
