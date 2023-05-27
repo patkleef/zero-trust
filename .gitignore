@@ -58,7 +58,6 @@ _site/
 Gemfile.lock
 
 # Ignore any local configuration files
-_config.yml
 _config.local.yml
 
 # Ignore any generated files or directories
