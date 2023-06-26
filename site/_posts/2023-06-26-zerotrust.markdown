@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Zero Trust"
-date:   2023-06-27 08:54:15 +0200
+date:   2023-06-26 08:54:15 +0200
 categories: zero-trust
 tags: zero-trust
 author_profile: true
