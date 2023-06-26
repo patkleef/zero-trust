@@ -2,27 +2,76 @@
 layout: splash
 classes: wide
 title: SmartMoney
-excerpt: SmartMoney manages the financials of individuals and provides advice on becoming financially independent.
+excerpt: SmartMoney manages the financials of individuals and provides advice on becoming financially healthy.
 header:
   overlay_image: /assets/images/application.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  image_description: "A description of the image"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 permalink: /smartmoney/
 ---
 
-SmartMoney is an application developed by the fictional company OneFinance, which manages financial data for thousands of customers. SmartMoney helps customers gain insight into their personal finances and provides advice on becoming financially independent. The customer service department is responsible for managing all of the customer data. Based on this data, the expert department provides advice to customers on how to save costs and create monthly budgets.
+<p>SmartMoney is an application developed by the fictional company OneFinance, which manages financial data for
+  thousands of customers. SmartMoney helps customers gain insight into their personal finances and provides advice on
+  becoming financially healthy. The customer service department is responsible for managing all of the customer data.
+  Based on this data, the expert department provides advice to customers on how to save costs and create monthly
+  budgets.</p>
 
+<p>When the COVID-19 pandemic broke out, the government enforced lockdowns, which had severe consequences for
+  OneFinance. With employees working from home and unable to access the SmartMoney application, the traditional company,
+  which had not invested much in their infrastructure, faced challenges as everything still ran on-premises with no
+  remote connection possible. To enable employees to work from home, the company rushed to bring some of their solutions
+  to the cloud.</p>
 
-<h2>Current Azure architecture</h2>
-<img src="/assets/images/smartmoney-before.jpg" alt="SmartMoney" class="align-right" />
-Employees from OneFinance can authenticate to the SmartMoney application using their Azure AD account. The application is hosted in Azure App Service and uses Azure SQL and Azure Storage account to store data.
-The SmartMoney solution is split into a frontend application and backend application that contains a set of APIs. All is deployed and managed into one subscription.
+<section class="page__content__section">
+  <h2>Current Azure architecture</h2>
+  <img src="/assets/images/smartmoney-before.jpg" alt="SmartMoney" class="align-right" />
+  Employees from OneFinance can authenticate to the SmartMoney application using their Azure AD account. The application
+  is hosted in Azure App Service and uses Azure SQL and Azure Storage account to store data.
+  The SmartMoney solution is split into a frontend application and backend application that contains a set of APIs. All
+  is deployed and managed into one subscription.
 
-The application is available through a public URL by using Azure DNS zone. Firewall settings are configured to only allow certain IP addresses to access the application.
+  The application is available through a public URL by using Azure DNS zone. Firewall settings are configured to only
+  allow certain IP addresses to access the application.
 
-<a href="https://github.com/patkleef/zero-trust">Source code</a>
+  <a href="https://github.com/patkleef/zero-trust">Source code</a>
 
+</section>
+
+<section class="page__content__section">  
+  <h2>Zero Trust</h2>
+
+  <p class="notice--info">
+    Zero Trust is not a one-time action, but rather an ongoing effort to enhance your security stance. While it's important to carefully consider your architecture before implementing Zero Trust, I will continually update the information and architecture below as I publish new articles about improving the architecture of SmartMoney. Information might be updated to demonstrate new services or features that can be used to improve the security of the application.
+  </p>
+
+  <h3>Protect surface</h3>
+  <p>To implement Zero Trust, the initial step is to identify the surfaces that require protection. OneFinance has multiple internal and external applications, among which SmartMoney is recognized as a protect surface. Additionally, the ERP system, intranet, and corporate website are also considered as protect surfaces. </p>
+
+  <h3>Map the transaction flows</h3>
+  <ul>
+    <li>The frontend application communicates with the backend API to fetch and write data.</li>
+    <li>The backend application fetch and store data from Azure SQL</li>
+    <li>The backend application fetch and store data from Azure Storage account</li>
+  </ul>
+
+  <h3>Architect a Zero Trust environment</h3>
+  <p>...</p>
+
+  <h3>Create Zero Trust security policies</h3>
+  <p>...</p>
+
+  <h3>Monitor and maintain</h3>
+  <p>...</p>
+
+  <p><a href="{% post_url 2023-05-06-zerotrust %}">Read more about Zero Trust</a> </p>
+</section>
+
+<section class="page__content__section">
+  <h2>Articles about infrastructure</h2>
+  <p>Here is a list of articles that detail how the infrastructure has been modified to align with the principles of Zero Trust.</p>
+  <div class="entries-list">
+    {% include posts-tag.html taxonomy="infrastructure" type=entries_layout %}
+  </div>
+</section>
 
 
 

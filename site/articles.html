@@ -1,10 +1,8 @@
 ---
 layout: single
-title: Posts
+title: Articles
 excerpt: The Zero Trust model ensures that every user, device, and application is authenticated and authorized before granting access to sensitive data, making it a crucial approach to protect against today's evolving threats." 
 ---
-
-
 
 {% for post in site.posts %}
   {% if post.header.teaser %}
@@ -34,6 +32,7 @@ excerpt: The Zero Trust model ensures that every user, device, and application i
       </h2>
       {% include page__meta.html type=include.type %}
       {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+      {% include page__taxonomy.html %}
     </article>
   </div>
 {% endfor %}
