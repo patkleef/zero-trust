@@ -1,7 +1,5 @@
 main:
-  - title: "SmartMoney"
-    url: /smartmoney
   - title: "Articles"
     url: /articles
-  - title: "About"
+  - title: "About me"
     url: https://www.patrickvankleef.com/about
