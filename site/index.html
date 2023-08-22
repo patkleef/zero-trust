@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.7 # same as adding an opacity of 0.5 to a black background
   image_description: "Zero Trust"
 intro:
-  - excerpt: "*Here on this site, you'll find information on the Zero Trust security model. Through a [fictional company](/smartmoney), I'll guide you through the implementation of Zero Trust as a means of safeguarding both your infrastructure and sensitive data.*"
+  - excerpt: "*Here on this site, you'll find information about the Zero Trust security model. Through an example of a [fictional company](/smartmoney), I'll guide you through the implementation of Zero Trust within Microsoft Azure.*"
 feature_row_zero_trust:
 - image_path: /assets/images/verify-explictly.png
   alt: "placeholder image 1"
@@ -36,6 +36,13 @@ feature_row_smart_money:
     url: "/smartmoney"
     btn_label: "Read More"
     btn_class: "btn--info btn--small"
+feature_row_articles:
+  - image_path: /assets/images/blog-zerotrust-banner.jpg
+    title: Zero Trust
+    excerpt: "Zero Trust is a security model that assumes breach and protects resources by enforcing the principles of least privilege and verifying explicit trust."
+    url: "/zero-trust/2023/06/26/zerotrust.html"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -43,13 +50,39 @@ feature_row_smart_money:
 <h2 class="text-center no-border-bottom">Zero Trust</h2>
 <p>Zero Trust is a security model based on the "Never trust, Always verify" principle. This means that all users, devices, and applications must be verified before granted access. Zero Trust is not a product that can be purchased but a security strategy. Products like Azure can be utilized to follow the Zero Trust principles.</p>
 
-{% include feature_row id="feature_row_zero_trust" buttonurl="/zero-trust/2023/05/06/zerotrust.html" buttontext="Read More" buttonclass="btn--info btn--small text-center" %}
+{% include feature_row id="feature_row_zero_trust" buttonurl="/zero-trust/2023/06/26/zerotrust.html" buttontext="Read More" buttonclass="btn--info btn--small text-center" %}
 
 <h2 class="text-center no-border-bottom">Breaches</h2>
 <p>Data breaches and hacks can cause severe financial losses, damage to reputation, and legal liabilities for companies. Individuals can experience identity theft, financial losses, and damage to credit scores. It can also cause emotional distress and a loss of trust in companies that handle personal information. Some examples of data breaches below.</p>
 
 {% include feature_row id="feature_row_breaches" %}
 
+<h2 class="text-center no-border-bottom">Frequently Asked Questions</h2>
+<strong>What is the goal of this site?</strong>
+<p>This site guides you in implementing Zero Trust within Microsoft Azure using a fictional company/application as an example.</p>
+
+<strong>For who is this site?</strong>
+<p>This site is designed for engineers who want to deepen their understanding of Zero Trust and learn how to leverage Microsoft Azure for Zero Trust implementation. It primarily focuses on infrastructure-related topics, with potential future expansions to developer-oriented subjects.</p>
+
+<strong>Why did I create this site?</strong>
+<p>As security risks increase, it is essential to understand how to mitigate these risks. As a cloud consultant, I get asked about security a lot. I created this site to share my knowledge and experience with Zero Trust and Microsoft Azure.</p>
+
+<strong>What is OneFinance?</strong>
+<p>OneFinance is a fictional company made up for the purpose of this site. Read more about OneFinance <a href="/smartmoney">here</a>.</p>
+
+<strong>What is SmartMoney?</strong>
+<p>SmartMoney, developed by OneFinance, is an application designed for customer accounting record management. This site will walk you through implementing Zero Trust in Microsoft Azure for the SmartMoney application. Read more about SmartMoney <a href="/smartmoney">here</a>.</p>
+
+<strong>How is the site structured?</strong>
+<p>
+  Start with reading about the <a href="/zero-trust/2023/06/26/zerotrust.html">Zero Trust security model</a>. Continue with the introduction of the fictional company <a href="/smartmoney">OneFinance and their SmartMoney application</a>.
+  In each <a href="/articles">article</a>, I create a new part of SmartMoney's new architecture, following the Zero Trust principles.
+</p>
+
 <h2 class="text-center no-border-bottom">The fictional company: OneFinance</h2>
 {% include feature_row id="feature_row_smart_money" type="left" %}
+
+<h2 class="text-center no-border-bottom">Latest articles</h2>
+
+{% include feature_row id="feature_row_articles" %}
 

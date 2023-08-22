@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Zero Trust"
+description: "Zero Trust is a security model that assumes breach and protects resources by enforcing the principles of least privilege and verifying explicit trust."
 date:   2023-06-26 08:54:15 +0200
 categories: zero-trust
 tags: zero-trust
