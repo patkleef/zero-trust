@@ -126,5 +126,8 @@ Thumbs.db
 .idea/
 .vscode/
 
+demo/
 demo/Frontend
 demo/Backend
+
+local-dev-setup.md
