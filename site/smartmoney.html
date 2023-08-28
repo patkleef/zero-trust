@@ -16,10 +16,10 @@ permalink: /smartmoney/
   budgets.</p>
 
 <p>When the COVID-19 pandemic broke out, the government enforced lockdowns, which had severe consequences for
-  OneFinance. With employees working from home and unable to access the SmartMoney application, the traditional company,
+  OneFinance. With employees working from home and unable to access the SmartMoney application, OneFinance
   which had not invested much in their infrastructure, faced challenges as everything still ran on-premises with no
-  remote connection possible. To enable employees to work from home, the company rushed to bring some of their solutions
-  to the cloud.</p>
+  remote connection possible. To enable employees to work from home, the company rushed to bring some of their workloads
+  to the cloud. Below the current architecture in Azure.</p>
 
 <section class="page__content__section">
   <h2>Current Azure architecture</h2>
@@ -29,10 +29,8 @@ permalink: /smartmoney/
   The SmartMoney solution is split into a frontend application and backend application that contains a set of APIs. All
   is deployed and managed into one subscription.
 
-  The application is available through a public URL by using Azure DNS zone. Firewall settings are configured to only
+  The application is available through a public URL. Firewall settings are configured to only
   allow certain IP addresses to access the application.
-
-  <a href="https://github.com/patkleef/zero-trust">Source code</a>
 
 </section>
 
@@ -40,7 +38,7 @@ permalink: /smartmoney/
   <h2>Zero Trust</h2>
 
   <p class="notice--info">
-    Zero Trust is not a one-time action, but rather an ongoing effort to enhance your security stance. While it's important to carefully consider your architecture before implementing Zero Trust, I will continually update the information and architecture below as I publish new articles about improving the architecture of SmartMoney. Information might be updated to demonstrate new services or features that can be used to improve the security of the application.
+    Zero Trust is not a one-time task, but rather an ongoing effort to enhance your security. While it's important to carefully consider your architecture before implementing Zero Trust, I will continually update the information and architecture as I publish new articles about improving the architecture of SmartMoney. Information might be updated to demonstrate new services or features that can be used to improve the security of the application.
   </p>
 
   <h3>Protect surface</h3>
@@ -54,7 +52,7 @@ permalink: /smartmoney/
   </ul>
 
   <h3>Architect a Zero Trust environment</h3>
-  <p>...</p>
+  <p>In each <a href="/articles/">article</a>, I'll explain how to secure the application and infrastructure.</p>
 
   <h3>Create Zero Trust security policies</h3>
   <p>...</p>
@@ -66,7 +64,7 @@ permalink: /smartmoney/
 </section>
 
 <section class="page__content__section">
-  <h2>Articles about infrastructure</h2>
+  <h2>Articles about securing the infrastructure</h2>
   <p>Here is a list of articles that detail how the infrastructure has been modified to align with the principles of Zero Trust.</p>
   <div class="entries-list">
     {% include posts-tag.html taxonomy="infrastructure" type=entries_layout %}
