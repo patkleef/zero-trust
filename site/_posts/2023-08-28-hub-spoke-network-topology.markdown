@@ -57,7 +57,7 @@ In the next section, I'll explain why OneFinance should use the hub-spoke topolo
 </div>
 
 ## Implement the hub-spoke network topology for SmartMoney
-Like described <a href="/smartmoney.html">here</a>, OneFinance rushed to deploy workloads to the cloud during Corona so that employees could continue to work from home. Essential aspects like security, costs and maintainability were not given priority. The network topology is the heart of the infrastructure. OneFinance has many workloads that are or will be deployed to the cloud. Many of those workloads should only be accessible by employees.
+Like described <a href="/smartmoney">here</a>, OneFinance rushed to deploy workloads to the cloud during Corona so that employees could continue to work from home. Essential aspects like security, costs and maintainability were not given priority. The network topology is the heart of the infrastructure. OneFinance has many workloads that are or will be deployed to the cloud. Many of those workloads should only be accessible by employees.
 
 Below the hub-spoke architecture for OneFinance and the SmartMoney workload. For now, I'll not go into detail about the different services that are deployed to the hub and spokes. These details will be covered in upcoming articles.
 
