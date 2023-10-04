@@ -138,7 +138,7 @@ If the Windows VM is installed, use RDP to connect to the VM. Run the downloaded
 
 Since the VM operates within the network, it should have direct access to our App Service `https://app-smartmoney-frontend-app.azurewebsites.net`. (<a href="/infrastructure/2023/08/28/secure-paas-services-with-private-endpoint.html">Remember</a> private endpoint and public access is disabled for the App Service.) Let's try it out:
 
-<img src="/assets/images/blog-app-proxy-rdp-appservice.jpg" />
+<img src="/assets/images/blog-app-proxy-rdp-appservice1.jpg" />
 
 The screenshot shows the default page of the App Service which means the VM can access the App Service. The command prompt displays the `nslookup` for the App Service, and as expected it returns the private endpoint IP address.
 
