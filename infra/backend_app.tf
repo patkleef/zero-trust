@@ -1,8 +1,5 @@
-locals {
-  enable_backend_app_private_endpoint = true
-}
-
 resource "azurerm_service_plan" "asp_backend" {
+  count               = local.deploy_backend_app ? 1 : 0
   name                = "asp-backend-app"
   resource_group_name = azurerm_resource_group.rg_smartmoney.name
   location            = local.location
@@ -11,23 +8,24 @@ resource "azurerm_service_plan" "asp_backend" {
 }
 
 resource "azurerm_linux_web_app" "app_backend" {
-  name                = "app-smartmoney-backend-app"
-  resource_group_name = azurerm_resource_group.rg_smartmoney.name
-  location            = local.location
-  service_plan_id     = azurerm_service_plan.asp_backend.id
+  count                         = local.deploy_backend_app ? 1 : 0
+  name                          = "app-smartmoney-backend-app"
+  resource_group_name           = azurerm_resource_group.rg_smartmoney.name
+  location                      = local.location
+  service_plan_id               = azurerm_service_plan.asp_backend[0].id
   public_network_access_enabled = false
 
   site_config {
-    always_on = false    
+    always_on = false
 
     application_stack {
-        dotnet_version = "7.0"
+      dotnet_version = "7.0"
     }
-  }  
+  }
 }
 
 resource "azurerm_private_endpoint" "backend_private_endpoint" {
-  count               = local.enable_backend_app_private_endpoint ? 1 : 0
+  count = local.deploy_backend_app && local.enable_backend_app_private_endpoint ? 1 : 0
 
   name                = "pv-smartmoney-backend-app"
   resource_group_name = azurerm_resource_group.rg_smartmoney.name
@@ -41,8 +39,8 @@ resource "azurerm_private_endpoint" "backend_private_endpoint" {
 
   private_service_connection {
     name                           = "pv-smartmoney-backend-app"
-    private_connection_resource_id = azurerm_linux_web_app.app_backend.id
-    is_manual_connection           = false  
+    private_connection_resource_id = azurerm_linux_web_app.app_backend[0].id
+    is_manual_connection           = false
     subresource_names              = ["sites"]
   }
 }

@@ -38,3 +38,10 @@ resource "azurerm_virtual_network_peering" "spoke_to_hub" {
   virtual_network_name         = azurerm_virtual_network.vnet_smartmoney.name
   remote_virtual_network_id    = azurerm_virtual_network.vnet_hub.id
 }
+
+resource "azurerm_virtual_network_peering" "hub_to_spoke" {
+  name                         = "hub-to-smartmoney"
+  resource_group_name          = azurerm_resource_group.rg_hub.name
+  virtual_network_name         = azurerm_virtual_network.vnet_hub.name
+  remote_virtual_network_id    = azurerm_virtual_network.vnet_smartmoney.id
+}

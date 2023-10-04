@@ -1,4 +1,5 @@
 resource "azurerm_storage_account" "smartmoney_storage_account" {
+  count                    = local.deploy_storage ? 1 : 0
   name                     = "stsmartmoney"
   resource_group_name      = azurerm_resource_group.rg_smartmoney.name
   location                 = local.location
@@ -10,6 +11,7 @@ resource "azurerm_storage_account" "smartmoney_storage_account" {
 }
 
 resource "azurerm_private_endpoint" "smartmoney_storage_account_private_endpoint" {
+  count               = local.deploy_storage ? 1 : 0
   name                = "pep-smartmoney-storage-account"
   resource_group_name = azurerm_resource_group.rg_smartmoney.name
   location            = local.location
@@ -21,7 +23,7 @@ resource "azurerm_private_endpoint" "smartmoney_storage_account_private_endpoint
   }
   private_service_connection {
     name                           = "pep-smartmoney-storage-account"
-    private_connection_resource_id = azurerm_storage_account.smartmoney_storage_account.id
+    private_connection_resource_id = azurerm_storage_account.smartmoney_storage_account[0].id
     is_manual_connection           = false
     subresource_names              = ["blob"]
   }

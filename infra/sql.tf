@@ -1,4 +1,5 @@
 resource "azurerm_mssql_server" "smartmoney_sql" {
+  count                        = local.deploy_sql ? 1 : 0
   name                         = "sql-smartmoney"
   resource_group_name          = azurerm_resource_group.rg_smartmoney.name
   location                     = local.location
@@ -10,6 +11,7 @@ resource "azurerm_mssql_server" "smartmoney_sql" {
 }
 
 resource "azurerm_private_endpoint" "smartmoney_sql_private_endpoint" {
+  count               = local.deploy_sql ? 1 : 0
   name                = "pep-smartmoney-sql"
   resource_group_name = azurerm_resource_group.rg_smartmoney.name
   location            = local.location
@@ -21,7 +23,7 @@ resource "azurerm_private_endpoint" "smartmoney_sql_private_endpoint" {
   }
   private_service_connection {
     name                           = "pep-smartmoney-sql"
-    private_connection_resource_id = azurerm_mssql_server.smartmoney_sql.id
+    private_connection_resource_id = azurerm_mssql_server.smartmoney_sql[0].id
     is_manual_connection           = false
     subresource_names              = ["SqlServer"]
   }
