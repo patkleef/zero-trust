@@ -32,8 +32,8 @@ resource "azurerm_windows_virtual_machine" "vm_windows_connector" {
   resource_group_name = azurerm_resource_group.rg_hub.name
   location            = azurerm_resource_group.rg_hub.location
   size                = "Standard_B2s"
-  admin_username      = "asdf"
-  admin_password      = "sdfsfdsfd"
+  admin_username      = ""
+  admin_password      = ""
   network_interface_ids = [
     azurerm_network_interface.nic_connector[0].id,
   ]
