@@ -2,7 +2,7 @@
 layout: single
 title:  "Access internal applications with Entra Application Proxy"
 description: "Application Proxy allows secure remote access to internal applications without the need of opening inbound ports in the network."
-date:   2023-10-02 14:30:00 +0100
+date:   2023-10-04 06:00:00 +0100
 categories: infrastructure
 tags: infrastructure
 author_profile: true
