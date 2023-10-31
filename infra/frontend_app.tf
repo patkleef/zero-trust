@@ -28,7 +28,7 @@ resource "azurerm_private_endpoint" "frontend_private_endpoint" {
   name                = "pv-smartmoney-frontend-app"
   resource_group_name = azurerm_resource_group.rg_smartmoney.name
   location            = local.location
-  subnet_id           = azurerm_subnet.subnet_private_endpoint.id
+  subnet_id           = azurerm_subnet.subnet_frontend.id
 
   private_dns_zone_group {
     name                 = "app-smartmoney-frontend-app-private-endpoint-zg"
