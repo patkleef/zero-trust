@@ -27,7 +27,7 @@ Assuming breach is one of the principles of Zero Trust. It basically means that 
     <i><a href="https://www.csoonline.com/article/567833/equifax-data-breach-faq-what-happened-who-was-affected-what-was-the-impact.html" target="_blank">source: csoonline.com</a></i>
 </div>
 
-The <a href="/smartmoney/">SmartMoney</a> workload is deployed in a separate spoke network. Three subnets are created: `snet-frontend` for the frontend app service, `snet-backend` for the backend app service and `snet-private-endpoints` for the SQL and storage account private endpoints. Below the architecture diagram.
+The <a href="/smartmoney/" target="_blank">SmartMoney</a> workload is deployed in a separate spoke network. Three subnets are created: `snet-frontend` for the frontend app service, `snet-backend` for the backend app service and `snet-private-endpoints` for the SQL and storage account private endpoints. Below the architecture diagram.
 <img src="/assets/diagrams/smartmoney-app-proxy.drawio.png"  />
 
 The following diagram illustrates the traffic flow between the frontend, backend application, SQL database and storage account.
