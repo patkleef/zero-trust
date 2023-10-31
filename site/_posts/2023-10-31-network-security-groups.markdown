@@ -190,9 +190,3 @@ If network security groups are implemented correctly we prevent that an attacker
 ## What is next?
 
 In the next article, I'll continue with protecting our application and infrastructure with Entra ID conditional access.
-
-## Social media post
-
-Minimize the impact of a breach by isolating workloads with network security groups.
-
-When designing your network, assume that a breach will happen at some point and minimize the impact of that breach. This is one of the principles of Zero Trust. Network security groups allows us to restrict the traffic flow and isolate workloads. A good  practice is to deny all traffic by default and only allow the traffic that is needed. In this article, I tell you all about network security groups and how you can use them to follow the Zero Trust principles.
