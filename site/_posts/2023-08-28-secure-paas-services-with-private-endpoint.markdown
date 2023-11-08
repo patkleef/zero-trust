@@ -10,7 +10,7 @@ share: true
 classes: wide
 show_date: true
 published: true
-
+read_time: true
 ---
 When using Azure you shouldn't take the security of your data and services for granted. Microsoft explicitly states that security is a shared responsibility between Azure and it's cloud users. Take PaaS services for instance, if you use a storage account but don't secure it properly you are increasing the risk of a data breach. In this article, I'll guide you through securing your PaaS services using Azure Private Link.
 

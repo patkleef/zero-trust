@@ -10,6 +10,7 @@ share: true
 classes: wide
 show_date: true
 published: true
+read_time: true
 ---
 
 <div class="notice--info">

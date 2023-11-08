@@ -9,6 +9,7 @@ author_profile: true
 classes: wide
 share: true
 show_date: true
+read_time: true
 ---
 Zero Trust is a security model based on the "Never trust, Always verify" principle. This means that all users, devices, and applications must be verified before they are granted access. Zero Trust is not a product that can be purchased but rather a strategy for securing networks, infrastructure, data and applications. However, some products, such as Azure, can be used to follow the principles of Zero Trust. John Kindervag developed the security model in 2010, but it took almost a decade before the industry started to embrace it. This was due to a combination of factors, including a shift to mobile and cloud solutions and the professionalization of cybercrime. The Zero Trust model is now widely accepted and used by many organizations and governments.
 

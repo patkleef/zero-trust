@@ -11,6 +11,7 @@ share: true
 classes: wide
 show_date: true
 published: true
+read_time: true
 ---
 
 The way we work and the tools we use are changing rapidly. With more employees working remotely and using their own devices, the way organizations manage and secure their infrastructure must also evolve. <a href="/smartmoney/">OneFinance</a> decided to adopt a work from home policy after the Covid-19 pandemic. Employees now work from home and need to access internal applications like <a href="/smartmoney/">SmartMoney</a>. In this article I'll explain how users can securely connect to internal applications by using Application Proxy.
