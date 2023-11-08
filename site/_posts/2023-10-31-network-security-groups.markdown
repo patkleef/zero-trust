@@ -12,7 +12,9 @@ show_date: true
 published: true
 read_time: true
 ---
-
+<hr />
+<i>In this blog post, I'll explain how to restrict subnet traffic flow with network security groups and create fine-grained rules with service tags. Why it's important to isolate workloads and resources inside your network to minimize the damage of a potential breach. As always, I'll use the SmartMoney application as an example. </i>
+<hr />
 Assuming breach is one of the principles of Zero Trust. It basically means that we should assume that an attacker is in the network and minimize the damage of what an attacker can do. Every time you design a network, you should assume that a breach will happen at some point and that you try to minimize the impact of that breach. A best practice is to isolate workloads as much as possible. The <a href="/infrastructure/2023/08/28/hub-spoke-network-topology.html" target="_blank">Hub Spoke network topology</a> allows us to do that by creating a spoke network for each workload. On top of that, we can segment the network into subnets and use network security groups to control the traffic. In this article, I will explain how network security groups work and how you can use them to follow the Zero Trust principles.
 
 <div class="notice--primary">
